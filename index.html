@@ -176,11 +176,11 @@
         }
 
         .cta-primary:hover {
-            background: transparent;
+            background: var(--color-accent);
             color: var(--color-offwhite);
-            border-color: var(--color-offwhite);
+            border-color: var(--color-accent);
             transform: translateY(-2px);
-            box-shadow: 0 8px 25px rgba(0,0,0,0.2);
+            box-shadow: 0 8px 25px rgba(74, 112, 40, 0.4);
         }
 
         .cta-secondary {
@@ -503,6 +503,202 @@
             box-shadow: 0 8px 20px rgba(45, 80, 22, 0.3);
         }
 
+        /* Section Disponibilités */
+        .disponibilites {
+            background: linear-gradient(135deg, var(--color-beige) 0%, #EBE6DC 100%);
+        }
+
+        .calendar-container {
+            margin-top: 3rem;
+            display: grid;
+            grid-template-columns: 2fr 1fr;
+            gap: 3rem;
+            align-items: start;
+        }
+
+        .calendar-intro h3 {
+            font-size: 2rem;
+            color: var(--color-forest);
+            margin-bottom: 1rem;
+        }
+
+        .calendar-intro p {
+            font-size: 1.1rem;
+            color: var(--color-text);
+            margin-bottom: 1.5rem;
+            line-height: 1.8;
+        }
+
+        .calendar-features {
+            list-style: none;
+            margin: 2rem 0;
+            padding: 0;
+        }
+
+        .calendar-features li {
+            padding: 0.8rem 0;
+            font-size: 1.05rem;
+            color: var(--color-text);
+            border-bottom: 1px solid rgba(45, 80, 22, 0.1);
+        }
+
+        .calendar-features li:last-child {
+            border-bottom: none;
+        }
+
+        /* Légende du calendrier */
+        .calendar-legend {
+            background: white;
+            padding: 1.5rem;
+            margin: 2rem 0;
+            border-left: 4px solid var(--color-forest);
+            box-shadow: 0 2px 8px rgba(0,0,0,0.05);
+        }
+
+        .calendar-legend h4 {
+            font-size: 1.1rem;
+            color: var(--color-forest);
+            margin-bottom: 1rem;
+        }
+
+        .legend-items {
+            display: flex;
+            gap: 2rem;
+            flex-wrap: wrap;
+        }
+
+        .legend-item {
+            display: flex;
+            align-items: center;
+            gap: 0.7rem;
+        }
+
+        .legend-box {
+            width: 30px;
+            height: 30px;
+            border: 2px solid #ccc;
+            border-radius: 2px;
+        }
+
+        .legend-box.available {
+            background: white;
+        }
+
+        .legend-box.occupied {
+            background: #2563eb;
+        }
+
+        .calendar-cta-text {
+            font-size: 1.05rem;
+            line-height: 1.7;
+            margin: 2rem 0 1.5rem 0;
+            text-align: center;
+        }
+
+        .calendar-embed {
+            margin: 2rem 0;
+            border-radius: 0;
+            overflow: hidden;
+            box-shadow: 0 4px 20px rgba(0,0,0,0.1);
+        }
+
+        .calendar-actions {
+            margin: 3rem 0;
+            text-align: center;
+        }
+
+        .calendar-btn {
+            display: inline-block;
+            padding: 1.2rem 3rem;
+            background: var(--color-forest);
+            color: white;
+            text-decoration: none;
+            font-size: 1.1rem;
+            border-radius: 2px;
+            transition: all 0.3s ease;
+            font-weight: 500;
+            letter-spacing: 0.3px;
+        }
+
+        .calendar-btn:hover {
+            background: var(--color-accent);
+            transform: translateY(-2px);
+            box-shadow: 0 8px 25px rgba(45, 80, 22, 0.3);
+        }
+
+        .calendar-note {
+            margin-top: 1rem;
+            font-size: 0.9rem;
+            color: var(--color-brown);
+            font-style: italic;
+        }
+
+        .calendar-info {
+            display: flex;
+            flex-direction: column;
+            gap: 2rem;
+        }
+
+        .info-card {
+            background: white;
+            padding: 2rem;
+            border-left: 4px solid var(--color-forest);
+            box-shadow: 0 2px 10px rgba(0,0,0,0.05);
+        }
+
+        .info-card h4 {
+            font-size: 1.3rem;
+            color: var(--color-forest);
+            margin-bottom: 1rem;
+        }
+
+        .info-card p {
+            margin: 0.5rem 0;
+            font-size: 0.95rem;
+            line-height: 1.6;
+        }
+
+        .info-card strong {
+            color: var(--color-forest);
+            font-weight: 600;
+        }
+
+        .calendar-help {
+            background: var(--color-forest);
+            border-left-color: var(--color-accent);
+        }
+
+        .calendar-help h4,
+        .calendar-help p {
+            color: white;
+        }
+
+        .help-link {
+            display: inline-block;
+            margin-top: 0.5rem;
+            color: var(--color-beige);
+            text-decoration: none;
+            font-weight: 500;
+            transition: color 0.3s ease;
+        }
+
+        .help-link:hover {
+            color: white;
+        }
+
+        /* Responsive Disponibilités */
+        @media (max-width: 968px) {
+            .calendar-container {
+                grid-template-columns: 1fr;
+                gap: 2rem;
+            }
+
+            .calendar-btn {
+                padding: 1rem 2rem;
+                font-size: 1rem;
+            }
+        }
+
         /* Footer */
         footer {
             background: var(--color-forest);
@@ -689,6 +885,7 @@
                 <li><a href="#entreprises">Entreprises</a></li>
                 <li><a href="#particuliers">Particuliers</a></li>
                 <li><a href="#le-lieu">Le Lieu</a></li>
+                <li><a href="#disponibilites">Réserver</a></li>
                 <li><a href="#contact">Contact</a></li>
             </ul>
         </div>
@@ -873,6 +1070,80 @@
         </div>
     </section>
 
+    <!-- Section Disponibilités & Réservation -->
+    <section class="disponibilites" id="disponibilites">
+        <div class="container">
+            <h2 class="section-title">Vérifier les disponibilités</h2>
+            <p class="section-subtitle">Consultez notre calendrier en temps réel puis contactez-nous pour réserver</p>
+            
+            <div class="calendar-container">
+                <div class="calendar-intro">
+                    <h3>📅 Consultez nos disponibilités</h3>
+                    <p>Visualisez en temps réel nos périodes libres et occupées. Les cases vides sont disponibles !</p>
+                    
+                    <!-- Légende du calendrier -->
+                    <div class="calendar-legend">
+                        <h4>📖 Comment lire le calendrier :</h4>
+                        <div class="legend-items">
+                            <div class="legend-item">
+                                <span class="legend-box available"></span>
+                                <span><strong>Case vide</strong> = Disponible</span>
+                            </div>
+                            <div class="legend-item">
+                                <span class="legend-box occupied"></span>
+                                <span><strong>Case bleue</strong> = Réservé</span>
+                            </div>
+                        </div>
+                    </div>
+
+                    <!-- Calendrier Google intégré -->
+                    <div class="calendar-embed">
+                        <iframe 
+                            src="COLLEZ_VOTRE_LIEN_GOOGLE_CALENDAR_ICI"
+                            style="border: 0" 
+                            width="100%" 
+                            height="600" 
+                            frameborder="0" 
+                            scrolling="no">
+                        </iframe>
+                    </div>
+
+                    <!-- Call to action après avoir vu le calendrier -->
+                    <div class="calendar-actions">
+                        <p class="calendar-cta-text">
+                            <strong>📌 Des dates disponibles vous intéressent ?</strong><br>
+                            Contactez-nous via le formulaire ci-dessous pour confirmer votre réservation.
+                        </p>
+                        <a href="#contact" class="calendar-btn">
+                            📧 Demander une réservation
+                        </a>
+                        <p class="calendar-note">Vous serez contacté sous 24h pour confirmer</p>
+                    </div>
+                </div>
+
+                <div class="calendar-info">
+                    <div class="info-card">
+                        <h4>🏢 Séminaires Entreprises</h4>
+                        <p><strong>Disponibilités :</strong> Lundi au Vendredi</p>
+                        <p><strong>Durée minimale :</strong> 1 journée</p>
+                        <p><strong>Capacité :</strong> Jusqu'à 30 personnes en journée</p>
+                    </div>
+                    <div class="info-card">
+                        <h4>🏡 Séjours Particuliers</h4>
+                        <p><strong>Disponibilités :</strong> Week-ends et vacances</p>
+                        <p><strong>Durée minimale :</strong> 2 nuits</p>
+                        <p><strong>Capacité :</strong> Jusqu'à 15 personnes</p>
+                    </div>
+                    <div class="info-card calendar-help">
+                        <h4>💡 Besoin d'aide ?</h4>
+                        <p>Des questions sur les disponibilités ou votre réservation ?</p>
+                        <a href="#contact" class="help-link">Contactez-nous directement →</a>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
     <!-- Section Contact -->
     <section class="contact" id="contact">
         <div class="container">
@@ -891,8 +1162,8 @@
                 </div>
                 
                 <div class="form-group">
-                    <label for="telephone">Téléphone</label>
-                    <input type="tel" id="telephone" name="telephone">
+                    <label for="telephone">Téléphone *</label>
+                    <input type="tel" id="telephone" name="telephone" required>
                 </div>
                 
                 <div class="form-group">
@@ -903,6 +1174,21 @@
                         <option value="particulier">Séjour Particulier</option>
                         <option value="autre">Autre</option>
                     </select>
+                </div>
+                
+                <div class="form-group">
+                    <label for="nombre_personnes">Nombre de personnes *</label>
+                    <input type="number" id="nombre_personnes" name="nombre_personnes" min="1" max="30" required>
+                </div>
+                
+                <div class="form-group">
+                    <label for="besoins">Besoins spécifiques (restauration, activités, accessibilité...)</label>
+                    <textarea id="besoins" name="besoins" rows="3" placeholder="Exemple : Repas végétariens, accès PMR, activités équestres..."></textarea>
+                </div>
+                
+                <div class="form-group">
+                    <label for="origine">Comment avez-vous connu Le Gîte La Source ?</label>
+                    <input type="text" id="origine" name="origine" placeholder="Bouche à oreille, réseaux sociaux, recherche internet...">
                 </div>
                 
                 <div class="form-group">
@@ -1014,6 +1300,9 @@
                 email: document.getElementById('email').value,
                 telephone: document.getElementById('telephone').value,
                 type: document.getElementById('type').value,
+                nombre_personnes: document.getElementById('nombre_personnes').value,
+                besoins: document.getElementById('besoins').value,
+                origine: document.getElementById('origine').value,
                 message: document.getElementById('message').value
             };
             
