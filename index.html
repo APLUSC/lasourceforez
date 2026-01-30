@@ -1,900 +1,476 @@
-/*
- * Le Gîte La Source - Feuille de style principale
- * Site web : lasourceforez.fr
- * 
- * Structure du fichier :
- * 1. Variables CSS
- * 2. Reset et styles de base
- * 3. Navigation
- * 4. Hero section
- * 5. Boutons CTA
- * 6. Sections génériques
- * 7. Features et cartes
- * 8. Section Entreprises
- * 9. Section Particuliers
- * 10. Section Le Lieu
- * 11. Section Disponibilités et Calendrier
- * 12. Section Contact et Formulaire
- * 13. Footer
- * 14. Responsive (Media Queries)
- */
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Le Gîte La Source - Séminaires & Séjours dans le Forez</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Cormorant:wght@400;600;700&family=Questrial&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <!-- Navigation -->
+    <nav id="navbar">
+        <div class="nav-container">
+            <div class="logo">La Source</div>
+            
+            <!-- Bouton Menu Mobile -->
+            <button class="mobile-menu-toggle" id="mobileMenuToggle" aria-label="Menu">
+                <span></span>
+                <span></span>
+                <span></span>
+            </button>
+            
+            <ul class="nav-links" id="navLinks">
+                <li><a href="#accueil">Accueil</a></li>
+                <li><a href="#entreprises">Entreprises</a></li>
+                <li><a href="#particuliers">Particuliers</a></li>
+                <li><a href="#le-lieu">Le Lieu</a></li>
+                <li><a href="#disponibilites">Réserver</a></li>
+                <li><a href="#contact">Contact</a></li>
+            </ul>
+        </div>
+    </nav>
 
-        :root {
-            --color-forest: #2D5016;
-            --color-beige: #F5F1E8;
-            --color-brown: #8B6F47;
-            --color-offwhite: #FAFAF8;
-            --color-text: #333333;
-            --color-accent: #4A7028;
-        }
+    <!-- Hero -->
+    <section class="hero" id="accueil">
+        <div class="hero-content">
+            <h1>Le Gîte La Source</h1>
+            <p class="hero-subtitle">Votre havre de paix pour séminaires et séjours<br>6 hectares de sérénité à 1h de Lyon</p>
+            <div class="hero-ctas">
+                <a href="#entreprises" class="cta-btn cta-primary">Séminaires Entreprises</a>
+                <a href="#particuliers" class="cta-btn cta-secondary">Séjours Particuliers</a>
+            </div>
+        </div>
+    </section>
 
-        * {
-            margin: 0;
-            padding: 0;
-            box-sizing: border-box;
-        }
+    <!-- Section Entreprises -->
+    <section class="entreprises" id="entreprises">
+        <div class="container">
+            <h2 class="section-title">Séminaires & Formations</h2>
+            <p class="section-subtitle">Un espace idéal pour se déconnecter et travailler en équipe dans un cadre ressourçant</p>
+            
+            <div class="features-grid">
+                <div class="feature-card">
+                    <h3>Hébergement sur place</h3>
+                    <p>Jusqu'à 15 couchages confortables pour vos équipes qui souhaitent enchaîner plusieurs jours de formation</p>
+                </div>
+                <div class="feature-card">
+                    <h3>Cohésion d'équipe</h3>
+                    <p>Salles de formation adaptées dans un environnement propice aux échanges et à la créativité</p>
+                </div>
+                <div class="feature-card">
+                    <h3>Cadre ressourçant</h3>
+                    <p>Vue imprenable, aucun vis-à-vis, présence apaisante des chevaux pour un environnement serein</p>
+                </div>
+                <div class="feature-card">
+                    <h3>Déconnexion totale</h3>
+                    <p>6 hectares de nature pour se retrouver, se ressourcer et travailler loin des distractions</p>
+                </div>
+            </div>
 
-        body {
-            font-family: 'Questrial', sans-serif;
-            color: var(--color-text);
-            line-height: 1.7;
-            overflow-x: hidden;
-        }
+            <div class="photo-gallery">
+                <div class="photo-item">
+                    <img src="images/entreprise-1.jpg" alt="Table de séminaire sous pergola avec vue">
+                </div>
+                <div class="photo-item">
+                    <img src="images/entreprise-2.jpg" alt="Terrasse couverte avec espace détente">
+                </div>
+                <div class="photo-item">
+                    <img src="images/entreprise-3.jpg" alt="Espace nature avec bancs en bois">
+                </div>
+            </div>
 
-        h1, h2, h3 {
-            font-family: 'Cormorant', serif;
-            font-weight: 600;
-            line-height: 1.2;
-        }
+            <div style="text-align: center;">
+                <a href="#contact" class="cta-btn cta-primary" style="display: inline-block;">Demander un devis</a>
+            </div>
+        </div>
+    </section>
 
-        /* Navigation */
-        nav {
-            position: fixed;
-            top: 0;
-            width: 100%;
-            background: rgba(250, 250, 248, 0.95);
-            backdrop-filter: blur(10px);
-            z-index: 1000;
-            border-bottom: 1px solid rgba(45, 80, 22, 0.1);
-            transition: all 0.3s ease;
-        }
+    <!-- Section Particuliers -->
+    <section class="particuliers" id="particuliers">
+        <div class="container">
+            <h2 class="section-title">Week-ends & Vacances</h2>
+            <p class="section-subtitle">Location pour groupes d'amis et familles en quête de calme et d'authenticité</p>
+            
+            <div class="features-grid">
+                <div class="feature-card">
+                    <h3>Comme chez soi</h3>
+                    <p>Une maison simple, épurée et confortable où vous vous sentez immédiatement bien</p>
+                </div>
+                <div class="feature-card">
+                    <h3>Vue panoramique</h3>
+                    <p>Une vue imprenable sur le Forez, sans aucun vis-à-vis pour préserver votre intimité</p>
+                </div>
+                <div class="feature-card">
+                    <h3>Présence des chevaux</h3>
+                    <p>Des compagnons paisibles qui font de ce lieu un espace de sérénité unique</p>
+                </div>
+                <div class="feature-card">
+                    <h3>6 hectares à explorer</h3>
+                    <p>Un espace naturel généreux pour se reconnecter à l'essentiel en famille ou entre amis</p>
+                </div>
+            </div>
 
-        nav.scrolled {
-            box-shadow: 0 4px 20px rgba(0,0,0,0.08);
-        }
+            <div class="photo-gallery">
+                <div class="photo-item">
+                    <img src="images/particulier-1.jpg" alt="Intérieur convivial avec apéritif">
+                </div>
+                <div class="photo-item">
+                    <img src="images/particulier-2.jpg" alt="Chambre épurée et confortable">
+                </div>
+                <div class="photo-item">
+                    <img src="images/particulier-3.png" alt="Jacuzzi avec vue sur nature et chevaux">
+                </div>
+            </div>
 
-        .nav-container {
-            max-width: 1400px;
-            margin: 0 auto;
-            padding: 1.2rem 4rem;
-            display: flex;
-            justify-content: space-between;
-            align-items: center;
-        }
+            <div style="text-align: center;">
+                <a href="#contact" class="cta-btn cta-primary" style="display: inline-block;">Disponibilités & Réservation</a>
+            </div>
+        </div>
+    </section>
 
-        .logo {
-            font-family: 'Cormorant', serif;
-            font-size: 1.8rem;
-            font-weight: 700;
-            color: var(--color-forest);
-            letter-spacing: -0.5px;
-        }
+    <!-- Section Le Lieu -->
+    <section class="le-lieu" id="le-lieu">
+        <div class="container">
+            <h2 class="section-title">Le Lieu</h2>
+            <p class="section-subtitle">Un écrin de verdure dans le Forez, pensé pour le ressourcement</p>
+            
+            <div class="lieu-content">
+                <div class="lieu-description">
+                    <h3>Une maison d'exception</h3>
+                    <p>Le Gîte La Source est bien plus qu'un simple lieu d'hébergement. C'est un espace où la simplicité rencontre le confort, où l'épuré rejoint l'authentique.</p>
+                    
+                    <p>Nichée sur 6 hectares de nature préservée, la maison vous accueille dans une atmosphère chaleureuse et apaisante. Chaque détail a été pensé pour que vous vous sentiez immédiatement chez vous.</p>
+                    
+                    <p>La vue panoramique, l'absence totale de vis-à-vis et la présence paisible des chevaux font de cet endroit un refuge idéal pour se retrouver, que ce soit en équipe professionnelle ou en famille.</p>
+                    
+                    <div class="lieu-stats">
+                        <div class="stat-item">
+                            <span class="stat-number">6 ha</span>
+                            <span class="stat-label">de terrain</span>
+                        </div>
+                        <div class="stat-item">
+                            <span class="stat-number">15</span>
+                            <span class="stat-label">couchages</span>
+                        </div>
+                        <div class="stat-item">
+                            <span class="stat-number">1h</span>
+                            <span class="stat-label">de Lyon</span>
+                        </div>
+                    </div>
+                </div>
 
-        .nav-links {
-            display: flex;
-            gap: 3rem;
-            list-style: none;
-        }
+                <div class="lieu-gallery-large">
+                    <div class="photo-item">
+                        <img src="images/lieu-1.jpg" alt="Vue panoramique avec chevaux dans la prairie">
+                    </div>
+                    <div class="photo-item">
+                        <img src="images/lieu-2.png" alt="Lever de soleil avec cheval">
+                    </div>
+                    <div class="photo-item">
+                        <img src="images/lieu-3.jpg" alt="La maison de nuit">
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
 
-        .nav-links a {
-            color: var(--color-text);
-            text-decoration: none;
-            font-size: 0.95rem;
-            letter-spacing: 0.3px;
-            transition: color 0.3s ease;
-            position: relative;
-        }
+    <!-- Section Localisation -->
+    <section class="localisation">
+        <div class="container">
+            <h2 class="section-title">Localisation</h2>
+            <p class="section-subtitle">Au cœur du Forez, à seulement 1 heure de Lyon</p>
+            
+            <div class="map-container">
+                <iframe 
+                    src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d2829.992179528298!2d4.0192665761717565!3d45.773472512750494!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x47f4234b24e81439%3A0x6034aac4b29aa6e5!2s650%20Chem.%20de%20Baloye!5e1!3m2!1sfr!2sfr!4v1769374271197!5m2!1sfr!2sfr"
+                    width="100%" 
+                    height="100%" 
+                    style="border:0;" 
+                    allowfullscreen="" 
+                    loading="lazy" 
+                    referrerpolicy="no-referrer-when-downgrade">
+                </iframe>
+            </div>
 
-        .nav-links a::after {
-            content: '';
-            position: absolute;
-            bottom: -5px;
-            left: 0;
-            width: 0;
-            height: 2px;
-            background: var(--color-accent);
-            transition: width 0.3s ease;
-        }
+            <div class="location-info">
+                <div class="info-block">
+                    <h3>📍 Adresse</h3>
+                    <p>650 Chemin de Baloye<br>42130 ARTHUN<br>Département de la Loire</p>
+                </div>
+                <div class="info-block">
+                    <h3>🚗 Accès</h3>
+                    <p>À 1 heure de Lyon<br>Accès facile en voiture<br>Parking sur place</p>
+                </div>
+                <div class="info-block">
+                    <h3>🌲 Environnement</h3>
+                    <p>En pleine nature<br>Calme absolu<br>Sans vis-à-vis</p>
+                </div>
+            </div>
+        </div>
+    </section>
 
-        .nav-links a:hover {
-            color: var(--color-forest);
-        }
+    <!-- Section Disponibilités & Réservation -->
+    <section class="disponibilites" id="disponibilites">
+        <div class="container">
+            <h2 class="section-title">Vérifier les disponibilités</h2>
+            <p class="section-subtitle">Consultez notre calendrier en temps réel puis contactez-nous pour réserver</p>
+            
+            <div class="calendar-container">
+                <div class="calendar-intro">
+                    <h3>📅 Consultez nos disponibilités</h3>
+                    <p>Visualisez en temps réel nos périodes libres et occupées. Les cases vides sont disponibles !</p>
+                    
+                    <!-- Légende du calendrier -->
+                    <div class="calendar-legend">
+                        <h4>📖 Comment lire le calendrier :</h4>
+                        <div class="legend-items">
+                            <div class="legend-item">
+                                <span class="legend-box available"></span>
+                                <span><strong>Case vide</strong> = Disponible</span>
+                            </div>
+                            <div class="legend-item">
+                                <span class="legend-box occupied"></span>
+                                <span><strong>Case bleue</strong> = Réservé</span>
+                            </div>
+                        </div>
+                    </div>
 
-        .nav-links a:hover::after {
-            width: 100%;
-        }
+                    <!-- Calendrier Google intégré -->
+                    <div class="calendar-embed">
+                       <iframe src="https://calendar.google.com/calendar/embed?height=450&wkst=2&ctz=Europe%2FParis&showPrint=0&showTitle=0&showTabs=0&showCalendars=0&showTz=0&src=Y180NjliYzA1ZjhiZmFjOTUwODZlOTg0NTY0NmYxNmJjYTI4NDFjZGQzNzhiYjRjMTRjMDVkZDdmNDBkMDY4ZjQyQGdyb3VwLmNhbGVuZGFyLmdvb2dsZS5jb20&color=%234285f4" style="border-width:0" width="900" height="450" frameborder="0" scrolling="no"></iframe>
+                    </div>
 
-        /* Hero Section */
-        .hero {
-            height: 100vh;
-            position: relative;
-            display: flex;
-            align-items: center;
-            justify-content: center;
-            background: linear-gradient(135deg, rgba(45, 80, 22, 0.4), rgba(139, 111, 71, 0.3)), 
-                        url('images/hero.jpg');
-            background-size: cover;
-            background-position: center;
-            background-attachment: fixed;
-        }
+                    <!-- Call to action après avoir vu le calendrier -->
+                    <div class="calendar-actions">
+                        <p class="calendar-cta-text">
+                            <strong>📌 Des dates disponibles vous intéressent ?</strong><br>
+                            Contactez-nous via le formulaire ci-dessous pour confirmer votre réservation.
+                        </p>
+                        <a href="#contact" class="calendar-btn">
+                            📧 Demander une réservation
+                        </a>
+                        <p class="calendar-note">Vous serez contacté sous 24h pour confirmer</p>
+                    </div>
+                </div>
 
-        .hero-content {
-            text-align: center;
-            color: white;
-            z-index: 2;
-            animation: fadeInUp 1.2s ease-out;
-        }
+                <div class="calendar-info">
+                    <div class="info-card">
+                        <h4>🏢 Séminaires Entreprises</h4>
+                        <p><strong>Disponibilités :</strong> Lundi au Vendredi</p>
+                        <p><strong>Durée minimale :</strong> 1 journée</p>
+                        <p><strong>Capacité :</strong> Jusqu'à 30 personnes en journée</p>
+                    </div>
+                    <div class="info-card">
+                        <h4>🏡 Séjours Particuliers</h4>
+                        <p><strong>Disponibilités :</strong> Week-ends et vacances</p>
+                        <p><strong>Durée minimale :</strong> 2 nuits</p>
+                        <p><strong>Capacité :</strong> Jusqu'à 15 personnes</p>
+                    </div>
+                    <div class="info-card calendar-help">
+                        <h4>💡 Besoin d'aide ?</h4>
+                        <p>Des questions sur les disponibilités ou votre réservation ?</p>
+                        <a href="#contact" class="help-link">Contactez-nous directement →</a>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
 
-        @keyframes fadeInUp {
-            from {
-                opacity: 0;
-                transform: translateY(30px);
+    <!-- Section Contact -->
+    <section class="contact" id="contact">
+        <div class="container">
+            <h2 class="section-title">Contactez-nous</h2>
+            <p class="section-subtitle">Nous sommes à votre écoute pour répondre à toutes vos questions</p>
+            
+            <form class="contact-form" id="contactForm">
+                <div class="form-group">
+                    <label for="nom">Nom *</label>
+                    <input type="text" id="nom" name="nom" required>
+                </div>
+                
+                <div class="form-group">
+                    <label for="email">Email *</label>
+                    <input type="email" id="email" name="email" required>
+                </div>
+                
+                <div class="form-group">
+                    <label for="telephone">Téléphone *</label>
+                    <input type="tel" id="telephone" name="telephone" required>
+                </div>
+                
+                <div class="form-group">
+                    <label for="type">Type de demande *</label>
+                    <select id="type" name="type" required>
+                        <option value="">-- Sélectionnez --</option>
+                        <option value="entreprise">Séminaire Entreprise</option>
+                        <option value="particulier">Séjour Particulier</option>
+                        <option value="autre">Autre</option>
+                    </select>
+                </div>
+                
+                <div class="form-group">
+                    <label for="nombre_personnes">Nombre de personnes *</label>
+                    <input type="number" id="nombre_personnes" name="nombre_personnes" min="1" max="30" required>
+                </div>
+                
+                <div class="form-group">
+                    <label for="besoins">Besoins spécifiques (restauration, activités, accessibilité...)</label>
+                    <textarea id="besoins" name="besoins" rows="3" placeholder="Exemple : Repas végétariens, accès PMR, activités équestres..."></textarea>
+                </div>
+                
+                <div class="form-group">
+                    <label for="origine">Comment avez-vous connu Le Gîte La Source ?</label>
+                    <input type="text" id="origine" name="origine" placeholder="Bouche à oreille, réseaux sociaux, recherche internet...">
+                </div>
+                
+                <div class="form-group">
+                    <label for="message">Message *</label>
+                    <textarea id="message" name="message" required></textarea>
+                </div>
+                
+                <button type="submit" class="submit-btn">Envoyer la demande</button>
+                <p style="margin-top: 1rem; font-size: 0.9rem; color: #666; text-align: center;" id="formStatus"></p>
+            </form>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer>
+        <div class="container">
+            <div style="display: flex; flex-direction: column; align-items: center; gap: 1rem;">
+                <p>&copy; 2026 Le Gîte La Source - Tous droits réservés</p>
+                <p style="font-size: 0.9rem;">650 Chemin de Baloye, 42130 ARTHUN</p>
+                
+                <!-- Réseaux sociaux -->
+                <div style="display: flex; gap: 1.5rem; margin-top: 0.5rem;">
+                    <a href="https://www.instagram.com/gite.lasource/" 
+                       target="_blank" 
+                       rel="noopener noreferrer"
+                       style="color: white; text-decoration: none; display: flex; align-items: center; gap: 0.5rem; transition: opacity 0.3s ease;"
+                       onmouseover="this.style.opacity='0.7'"
+                       onmouseout="this.style.opacity='1'">
+                        <svg width="24" height="24" viewBox="0 0 24 24" fill="currentColor">
+                            <path d="M12 2.163c3.204 0 3.584.012 4.85.07 3.252.148 4.771 1.691 4.919 4.919.058 1.265.069 1.645.069 4.849 0 3.205-.012 3.584-.069 4.849-.149 3.225-1.664 4.771-4.919 4.919-1.266.058-1.644.07-4.85.07-3.204 0-3.584-.012-4.849-.07-3.26-.149-4.771-1.699-4.919-4.92-.058-1.265-.07-1.644-.07-4.849 0-3.204.013-3.583.07-4.849.149-3.227 1.664-4.771 4.919-4.919 1.266-.057 1.645-.069 4.849-.069zm0-2.163c-3.259 0-3.667.014-4.947.072-4.358.2-6.78 2.618-6.98 6.98-.059 1.281-.073 1.689-.073 4.948 0 3.259.014 3.668.072 4.948.2 4.358 2.618 6.78 6.98 6.98 1.281.058 1.689.072 4.948.072 3.259 0 3.668-.014 4.948-.072 4.354-.2 6.782-2.618 6.979-6.98.059-1.28.073-1.689.073-4.948 0-3.259-.014-3.667-.072-4.947-.196-4.354-2.617-6.78-6.979-6.98-1.281-.059-1.69-.073-4.949-.073zm0 5.838c-3.403 0-6.162 2.759-6.162 6.162s2.759 6.163 6.162 6.163 6.162-2.759 6.162-6.163c0-3.403-2.759-6.162-6.162-6.162zm0 10.162c-2.209 0-4-1.79-4-4 0-2.209 1.791-4 4-4s4 1.791 4 4c0 2.21-1.791 4-4 4zm6.406-11.845c-.796 0-1.441.645-1.441 1.44s.645 1.44 1.441 1.44c.795 0 1.439-.645 1.439-1.44s-.644-1.44-1.439-1.44z"/>
+                        </svg>
+                        <span>@gite.lasource</span>
+                    </a>
+                </div>
+            </div>
+        </div>
+    </footer>
+
+    <script>
+        // Menu Mobile Toggle
+        const mobileMenuToggle = document.getElementById('mobileMenuToggle');
+        const navLinks = document.getElementById('navLinks');
+
+        mobileMenuToggle.addEventListener('click', function() {
+            this.classList.toggle('active');
+            navLinks.classList.toggle('active');
+        });
+
+        // Fermer le menu quand on clique sur un lien
+        document.querySelectorAll('.nav-links a').forEach(link => {
+            link.addEventListener('click', function() {
+                mobileMenuToggle.classList.remove('active');
+                navLinks.classList.remove('active');
+            });
+        });
+
+        // Fermer le menu quand on clique en dehors
+        document.addEventListener('click', function(event) {
+            const isClickInsideNav = navLinks.contains(event.target);
+            const isClickOnToggle = mobileMenuToggle.contains(event.target);
+            
+            if (!isClickInsideNav && !isClickOnToggle && navLinks.classList.contains('active')) {
+                mobileMenuToggle.classList.remove('active');
+                navLinks.classList.remove('active');
             }
-            to {
-                opacity: 1;
-                transform: translateY(0);
+        });
+
+        // Navigation scroll effect
+        window.addEventListener('scroll', function() {
+            const navbar = document.getElementById('navbar');
+            if (window.scrollY > 100) {
+                navbar.classList.add('scrolled');
+            } else {
+                navbar.classList.remove('scrolled');
             }
-        }
-
-        .hero h1 {
-            font-size: 4.5rem;
-            margin-bottom: 1rem;
-            font-weight: 700;
-            text-shadow: 0 2px 20px rgba(0,0,0,0.3);
-            letter-spacing: -1px;
-        }
-
-        .hero-subtitle {
-            font-size: 1.5rem;
-            margin-bottom: 3rem;
-            font-weight: 300;
-            letter-spacing: 1px;
-            opacity: 0.95;
-        }
-
-        .hero-ctas {
-            display: flex;
-            gap: 2rem;
-            justify-content: center;
-            animation: fadeInUp 1.4s ease-out;
-        }
-
-        .cta-btn {
-            padding: 1rem 2.5rem;
-            font-size: 1rem;
-            text-decoration: none;
-            border-radius: 2px;
-            transition: all 0.3s ease;
-            letter-spacing: 0.5px;
-            font-family: 'Questrial', sans-serif;
-            border: 2px solid transparent;
-        }
-
-        .cta-primary {
-            background: var(--color-offwhite);
-            color: var(--color-forest);
-            border-color: var(--color-offwhite);
-        }
-
-        .cta-primary:hover {
-            background: var(--color-accent);
-            color: var(--color-offwhite);
-            border-color: var(--color-accent);
-            transform: translateY(-2px);
-            box-shadow: 0 8px 25px rgba(74, 112, 40, 0.4);
-        }
-
-        .cta-secondary {
-            background: transparent;
-            color: var(--color-offwhite);
-            border-color: var(--color-offwhite);
-        }
-
-        .cta-secondary:hover {
-            background: var(--color-offwhite);
-            color: var(--color-forest);
-            transform: translateY(-2px);
-        }
-
-        /* Section Générique */
-        section {
-            padding: 8rem 4rem;
-        }
-
-        .container {
-            max-width: 1400px;
-            margin: 0 auto;
-        }
-
-        .section-title {
-            font-size: 3.5rem;
-            margin-bottom: 1rem;
-            color: var(--color-forest);
-            text-align: center;
-        }
-
-        .section-subtitle {
-            text-align: center;
-            font-size: 1.2rem;
-            color: var(--color-brown);
-            margin-bottom: 4rem;
-            max-width: 700px;
-            margin-left: auto;
-            margin-right: auto;
-        }
-
-        /* Section Entreprises */
-        .entreprises {
-            background: var(--color-offwhite);
-        }
-
-        .features-grid {
-            display: grid;
-            grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
-            gap: 3rem;
-            margin-bottom: 4rem;
-        }
-
-        .feature-card {
-            background: white;
-            padding: 2.5rem;
-            border-radius: 0;
-            border-left: 4px solid var(--color-forest);
-            transition: all 0.3s ease;
-            animation: fadeIn 0.6s ease-out forwards;
-            opacity: 0;
-        }
-
-        .feature-card:nth-child(1) { animation-delay: 0.1s; }
-        .feature-card:nth-child(2) { animation-delay: 0.2s; }
-        .feature-card:nth-child(3) { animation-delay: 0.3s; }
-        .feature-card:nth-child(4) { animation-delay: 0.4s; }
-
-        @keyframes fadeIn {
-            to {
-                opacity: 1;
-            }
-        }
-
-        .feature-card:hover {
-            transform: translateY(-5px);
-            box-shadow: 0 12px 30px rgba(0,0,0,0.1);
-            border-left-width: 8px;
-        }
-
-        .feature-icon {
-            font-size: 2.5rem;
-            margin-bottom: 1.5rem;
-        }
-
-        .feature-card h3 {
-            font-size: 1.6rem;
-            margin-bottom: 1rem;
-            color: var(--color-forest);
-        }
-
-        .feature-card p {
-            color: #666;
-            line-height: 1.8;
-        }
-
-        /* Galeries Photos */
-        .photo-gallery {
-            display: grid;
-            grid-template-columns: repeat(3, 1fr);
-            gap: 1.5rem;
-            margin: 4rem 0;
-        }
-
-        .photo-item {
-            aspect-ratio: 4/3;
-            background: var(--color-beige);
-            border-radius: 0;
-            overflow: hidden;
-            position: relative;
-            cursor: pointer;
-            transition: transform 0.4s ease;
-        }
-
-        .photo-item:hover {
-            transform: scale(1.03);
-            z-index: 10;
-        }
-
-        .photo-item img {
-            width: 100%;
-            height: 100%;
-            object-fit: cover;
-        }
-
-        .photo-placeholder {
-            display: flex;
-            align-items: center;
-            justify-content: center;
-            height: 100%;
-            font-size: 0.9rem;
-            color: var(--color-brown);
-            text-align: center;
-            padding: 2rem;
-        }
-
-        /* Section Particuliers */
-        .particuliers {
-            background: linear-gradient(135deg, var(--color-beige) 0%, #EBE6DC 100%);
-        }
-
-        /* Section Le Lieu */
-        .le-lieu {
-            background: var(--color-offwhite);
-        }
-
-        .lieu-content {
-            display: grid;
-            grid-template-columns: 1fr 1fr;
-            gap: 5rem;
-            align-items: start;
-            margin-top: 4rem;
-        }
-
-        .lieu-description h3 {
-            font-size: 2rem;
-            margin-bottom: 1.5rem;
-            color: var(--color-forest);
-        }
-
-        .lieu-description p {
-            margin-bottom: 1.5rem;
-            font-size: 1.1rem;
-            line-height: 1.9;
-        }
-
-        .lieu-stats {
-            display: grid;
-            grid-template-columns: repeat(3, 1fr);
-            gap: 2rem;
-            margin-top: 3rem;
-            padding: 3rem;
-            background: white;
-            border-left: 4px solid var(--color-accent);
-        }
-
-        .stat-item {
-            text-align: center;
-        }
-
-        .stat-number {
-            font-family: 'Cormorant', serif;
-            font-size: 3rem;
-            font-weight: 700;
-            color: var(--color-forest);
-            display: block;
-        }
-
-        .stat-label {
-            font-size: 0.95rem;
-            color: var(--color-brown);
-            margin-top: 0.5rem;
-        }
-
-        .lieu-gallery-large {
-            display: grid;
-            grid-template-columns: repeat(2, 1fr);
-            gap: 1.5rem;
-        }
-
-        .lieu-gallery-large .photo-item:first-child {
-            grid-column: 1 / -1;
-        }
-
-        /* Section Localisation */
-        .localisation {
-            background: var(--color-forest);
-            color: white;
-        }
-
-        .localisation .section-title {
-            color: white;
-        }
-
-        .localisation .section-subtitle {
-            color: rgba(255, 255, 255, 0.8);
-        }
-
-        .map-container {
-            background: white;
-            border-radius: 0;
-            overflow: hidden;
-            height: 500px;
-            margin-bottom: 3rem;
-        }
-
-        .map-placeholder {
-            width: 100%;
-            height: 100%;
-            display: flex;
-            align-items: center;
-            justify-content: center;
-            background: var(--color-beige);
-            color: var(--color-brown);
-            font-size: 1.1rem;
-        }
-
-        .location-info {
-            display: grid;
-            grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
-            gap: 3rem;
-        }
-
-        .info-block h3 {
-            font-size: 1.8rem;
-            margin-bottom: 1rem;
-            color: var(--color-beige);
-        }
-
-        .info-block p {
-            line-height: 1.9;
-            opacity: 0.9;
-        }
-
-        /* Section Contact */
-        .contact {
-            background: var(--color-offwhite);
-        }
-
-        .contact-form {
-            max-width: 700px;
-            margin: 0 auto;
-            background: white;
-            padding: 4rem;
-            border-left: 4px solid var(--color-forest);
-        }
-
-        .form-group {
-            margin-bottom: 2rem;
-        }
-
-        .form-group label {
-            display: block;
-            margin-bottom: 0.7rem;
-            color: var(--color-forest);
-            font-weight: 500;
-            letter-spacing: 0.3px;
-        }
-
-        .form-group input,
-        .form-group select,
-        .form-group textarea {
-            width: 100%;
-            padding: 1rem;
-            border: 1px solid #ddd;
-            border-radius: 0;
-            font-family: 'Questrial', sans-serif;
-            font-size: 1rem;
-            transition: border-color 0.3s ease;
-        }
-
-        .form-group input:focus,
-        .form-group select:focus,
-        .form-group textarea:focus {
-            outline: none;
-            border-color: var(--color-forest);
-        }
-
-        .form-group textarea {
-            resize: vertical;
-            min-height: 150px;
-        }
-
-        .submit-btn {
-            width: 100%;
-            padding: 1.2rem;
-            background: var(--color-forest);
-            color: white;
-            border: none;
-            font-size: 1.1rem;
-            cursor: pointer;
-            transition: all 0.3s ease;
-            font-family: 'Questrial', sans-serif;
-            letter-spacing: 0.5px;
-        }
-
-        .submit-btn:hover {
-            background: var(--color-accent);
-            transform: translateY(-2px);
-            box-shadow: 0 8px 20px rgba(45, 80, 22, 0.3);
-        }
-
-        /* Section Disponibilités */
-        .disponibilites {
-            background: linear-gradient(135deg, var(--color-beige) 0%, #EBE6DC 100%);
-        }
-
-        .calendar-container {
-            margin-top: 3rem;
-            display: grid;
-            grid-template-columns: 2fr 1fr;
-            gap: 3rem;
-            align-items: start;
-        }
-
-        .calendar-intro h3 {
-            font-size: 2rem;
-            color: var(--color-forest);
-            margin-bottom: 1rem;
-        }
-
-        .calendar-intro p {
-            font-size: 1.1rem;
-            color: var(--color-text);
-            margin-bottom: 1.5rem;
-            line-height: 1.8;
-        }
-
-        .calendar-features {
-            list-style: none;
-            margin: 2rem 0;
-            padding: 0;
-        }
-
-        .calendar-features li {
-            padding: 0.8rem 0;
-            font-size: 1.05rem;
-            color: var(--color-text);
-            border-bottom: 1px solid rgba(45, 80, 22, 0.1);
-        }
-
-        .calendar-features li:last-child {
-            border-bottom: none;
-        }
-
-        /* Légende du calendrier */
-        .calendar-legend {
-            background: white;
-            padding: 1.5rem;
-            margin: 2rem 0;
-            border-left: 4px solid var(--color-forest);
-            box-shadow: 0 2px 8px rgba(0,0,0,0.05);
-        }
-
-        .calendar-legend h4 {
-            font-size: 1.1rem;
-            color: var(--color-forest);
-            margin-bottom: 1rem;
-        }
-
-        .legend-items {
-            display: flex;
-            gap: 2rem;
-            flex-wrap: wrap;
-        }
-
-        .legend-item {
-            display: flex;
-            align-items: center;
-            gap: 0.7rem;
-        }
-
-        .legend-box {
-            width: 30px;
-            height: 30px;
-            border: 2px solid #ccc;
-            border-radius: 2px;
-        }
-
-        .legend-box.available {
-            background: white;
-        }
-
-        .legend-box.occupied {
-            background: #2563eb;
-        }
-
-        .calendar-cta-text {
-            font-size: 1.05rem;
-            line-height: 1.7;
-            margin: 2rem 0 1.5rem 0;
-            text-align: center;
-        }
-
-        .calendar-embed {
-            margin: 2rem 0;
-            border-radius: 0;
-            overflow: hidden;
-            box-shadow: 0 4px 20px rgba(0,0,0,0.1);
-        }
-
-        .calendar-embed iframe {
-            width: 100% !important;
-            max-width: 100% !important;
-            height: 600px;
-        }
-
-        .calendar-actions {
-            margin: 3rem 0;
-            text-align: center;
-        }
-
-        .calendar-btn {
-            display: inline-block;
-            padding: 1.2rem 3rem;
-            background: var(--color-forest);
-            color: white;
-            text-decoration: none;
-            font-size: 1.1rem;
-            border-radius: 2px;
-            transition: all 0.3s ease;
-            font-weight: 500;
-            letter-spacing: 0.3px;
-        }
-
-        .calendar-btn:hover {
-            background: var(--color-accent);
-            transform: translateY(-2px);
-            box-shadow: 0 8px 25px rgba(45, 80, 22, 0.3);
-        }
-
-        .calendar-note {
-            margin-top: 1rem;
-            font-size: 0.9rem;
-            color: var(--color-brown);
-            font-style: italic;
-        }
-
-        .calendar-info {
-            display: flex;
-            flex-direction: column;
-            gap: 2rem;
-        }
-
-        .info-card {
-            background: white;
-            padding: 2rem;
-            border-left: 4px solid var(--color-forest);
-            box-shadow: 0 2px 10px rgba(0,0,0,0.05);
-        }
-
-        .info-card h4 {
-            font-size: 1.3rem;
-            color: var(--color-forest);
-            margin-bottom: 1rem;
-        }
-
-        .info-card p {
-            margin: 0.5rem 0;
-            font-size: 0.95rem;
-            line-height: 1.6;
-        }
-
-        .info-card strong {
-            color: var(--color-forest);
-            font-weight: 600;
-        }
-
-        .calendar-help {
-            background: var(--color-forest);
-            border-left-color: var(--color-accent);
-        }
-
-        .calendar-help h4,
-        .calendar-help p {
-            color: white;
-        }
-
-        .help-link {
-            display: inline-block;
-            margin-top: 0.5rem;
-            color: var(--color-beige);
-            text-decoration: none;
-            font-weight: 500;
-            transition: color 0.3s ease;
-        }
-
-        .help-link:hover {
-            color: white;
-        }
-
-        /* Responsive Disponibilités */
-        @media (max-width: 968px) {
-            .calendar-container {
-                grid-template-columns: 1fr;
-                gap: 2rem;
-            }
-
-            .calendar-btn {
-                padding: 1rem 2rem;
-                font-size: 1rem;
-            }
-
-            .calendar-embed {
-                margin: 1rem 0;
-                overflow-x: hidden;
-            }
-
-            .calendar-embed iframe {
-                width: 100% !important;
-                max-width: 100% !important;
-                height: 500px !important;
-                min-height: 500px;
-            }
-
-            .legend-items {
-                flex-direction: column;
-                gap: 1rem;
-            }
-        }
-
-        /* Footer */
-        footer {
-            background: var(--color-forest);
-            color: white;
-            padding: 3rem 4rem;
-            text-align: center;
-        }
-
-        footer p {
-            opacity: 0.8;
-        }
-
-        /* Responsive */
-        @media (max-width: 968px) {
-            .nav-container {
-                padding: 1rem 2rem;
-            }
-
-            .nav-links {
-                gap: 1.5rem;
-            }
-
-            .hero h1 {
-                font-size: 3rem;
-            }
-
-            .hero-subtitle {
-                font-size: 1.2rem;
-            }
-
-            .hero-ctas {
-                flex-direction: column;
-                gap: 1rem;
-            }
-
-            section {
-                padding: 5rem 2rem;
-            }
-
-            .section-title {
-                font-size: 2.5rem;
-            }
-
-            .photo-gallery {
-                grid-template-columns: 1fr;
-            }
-
-            .lieu-content {
-                grid-template-columns: 1fr;
-                gap: 3rem;
-            }
-
-            .lieu-gallery-large {
-                grid-template-columns: 1fr;
-            }
-
-            .contact-form {
-                padding: 2rem;
-            }
-        }
-
-        /* Bouton Menu Mobile */
-        .mobile-menu-toggle {
-            display: none;
-            flex-direction: column;
-            gap: 5px;
-            background: none;
-            border: none;
-            cursor: pointer;
-            padding: 5px;
-            z-index: 1001;
-        }
-
-        .mobile-menu-toggle span {
-            width: 28px;
-            height: 3px;
-            background: var(--color-forest);
-            transition: all 0.3s ease;
-            border-radius: 2px;
-        }
-
-        .mobile-menu-toggle.active span:nth-child(1) {
-            transform: rotate(45deg) translate(8px, 8px);
-        }
-
-        .mobile-menu-toggle.active span:nth-child(2) {
-            opacity: 0;
-        }
-
-        .mobile-menu-toggle.active span:nth-child(3) {
-            transform: rotate(-45deg) translate(7px, -7px);
-        }
-
-        /* Menu Mobile */
-        @media (max-width: 968px) {
-            .mobile-menu-toggle {
-                display: flex;
-            }
-
-            .nav-links {
-                position: fixed;
-                top: 0;
-                right: -100%;
-                height: 100vh;
-                width: 70%;
-                max-width: 300px;
-                background: var(--color-offwhite);
-                flex-direction: column;
-                padding: 6rem 2rem 2rem 2rem;
-                gap: 2rem;
-                box-shadow: -5px 0 15px rgba(0,0,0,0.1);
-                transition: right 0.3s ease;
-                z-index: 1000;
-            }
-
-            .nav-links.active {
-                right: 0;
-            }
-
-            .nav-links li {
-                opacity: 0;
-                transform: translateX(20px);
-                transition: all 0.3s ease;
-            }
-
-            .nav-links.active li {
-                opacity: 1;
-                transform: translateX(0);
-            }
-
-            .nav-links.active li:nth-child(1) { transition-delay: 0.1s; }
-            .nav-links.active li:nth-child(2) { transition-delay: 0.2s; }
-            .nav-links.active li:nth-child(3) { transition-delay: 0.3s; }
-            .nav-links.active li:nth-child(4) { transition-delay: 0.4s; }
-            .nav-links.active li:nth-child(5) { transition-delay: 0.5s; }
-
-            .nav-links a {
-                font-size: 1.2rem;
-                padding: 0.5rem 0;
-            }
-        }
-
-        @media (max-width: 640px) {
-            .nav-links {
-                width: 80%;
-            }
-
-            .hero h1 {
-                font-size: 2.2rem;
-            }
-
-            .features-grid {
-                grid-template-columns: 1fr;
-            }
-
-            .lieu-stats {
-                grid-template-columns: 1fr;
-                padding: 2rem;
-            }
-        }
-
-        /* Smooth scroll */
-        html {
-            scroll-behavior: smooth;
-        }
+        });
+
+        // Smooth scroll for navigation links
+        document.querySelectorAll('a[href^="#"]').forEach(anchor => {
+            anchor.addEventListener('click', function (e) {
+                e.preventDefault();
+                const target = document.querySelector(this.getAttribute('href'));
+                if (target) {
+                    const offsetTop = target.offsetTop - 80;
+                    window.scrollTo({
+                        top: offsetTop,
+                        behavior: 'smooth'
+                    });
+                }
+            });
+        });
+
+        // Form handling (placeholder)
+        document.querySelector('.contact-form').addEventListener('submit', function(e) {
+            e.preventDefault();
+            
+            const submitBtn = document.querySelector('.submit-btn');
+            const formStatus = document.getElementById('formStatus');
+            const form = document.getElementById('contactForm');
+            
+            // Désactiver le bouton pendant l'envoi
+            submitBtn.disabled = true;
+            submitBtn.textContent = 'Envoi en cours...';
+            submitBtn.style.opacity = '0.7';
+            
+            // Récupérer les données du formulaire
+            const formData = {
+                nom: document.getElementById('nom').value,
+                email: document.getElementById('email').value,
+                telephone: document.getElementById('telephone').value,
+                type: document.getElementById('type').value,
+                nombre_personnes: document.getElementById('nombre_personnes').value,
+                besoins: document.getElementById('besoins').value,
+                origine: document.getElementById('origine').value,
+                message: document.getElementById('message').value
+            };
+            
+            // OPTION 1 : Formspree (recommandé - gratuit et simple)
+            // Remplacez YOUR_FORM_ID par votre ID Formspree après inscription sur formspree.io
+            fetch('https://formspree.io/f/mreqbble', {
+                method: 'POST',
+                headers: {
+                    'Content-Type': 'application/json'
+                },
+                body: JSON.stringify(formData)
+            })
+            .then(response => {
+                if (response.ok) {
+                    formStatus.style.color = 'green';
+                    formStatus.textContent = '✓ Message envoyé avec succès ! Nous vous répondrons rapidement.';
+                    form.reset();
+                } else {
+                    throw new Error('Erreur lors de l\'envoi');
+                }
+            })
+            .catch(error => {
+                // Pour l'instant, simuler un succès en attendant la configuration
+                formStatus.style.color = 'orange';
+                formStatus.textContent = '⚠ Configuration email en cours. Vos données : ' + formData.nom + ' - ' + formData.email;
+                console.log('Données du formulaire:', formData);
+            })
+            .finally(() => {
+                submitBtn.disabled = false;
+                submitBtn.textContent = 'Envoyer la demande';
+                submitBtn.style.opacity = '1';
+            });
+        });
+    </script>
+</body>
+</html>
