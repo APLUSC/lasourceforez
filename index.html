@@ -8,6 +8,17 @@
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Cormorant:wght@400;600;700&family=Questrial&display=swap" rel="stylesheet">
     <link rel="stylesheet" href="style.css">
+    
+    <!-- Google Analytics -->
+    <script async src="https://www.googletagmanager.com/gtag/js?id=G-VG3YTNYV45"></script>
+    <script>
+        window.dataLayer = window.dataLayer || [];
+        function gtag(){dataLayer.push(arguments);}
+        gtag('js', new Date());
+        
+        gtag('config', 'G-VG3YTNYV45');
+    </script>
+    
 </head>
 <body>
     <!-- Navigation -->
@@ -317,6 +328,16 @@
                 </div>
                 
                 <div class="form-group">
+                    <label for="date_arrivee">Début du séjour *</label>
+                    <input type="date" id="date_arrivee" name="date_arrivee" required>
+                </div>
+                
+                <div class="form-group">
+                    <label for="date_depart">Fin du séjour *</label>
+                    <input type="date" id="date_depart" name="date_depart" required>
+                </div>
+                
+                <div class="form-group">
                     <label for="besoins">Besoins spécifiques (restauration, activités, accessibilité...)</label>
                     <textarea id="besoins" name="besoins" rows="3" placeholder="Exemple : Repas végétariens, accès PMR, activités équestres..."></textarea>
                 </div>
@@ -436,10 +457,36 @@
                 telephone: document.getElementById('telephone').value,
                 type: document.getElementById('type').value,
                 nombre_personnes: document.getElementById('nombre_personnes').value,
+                date_arrivee: document.getElementById('date_arrivee').value,
+                date_depart: document.getElementById('date_depart').value,
                 besoins: document.getElementById('besoins').value,
                 origine: document.getElementById('origine').value,
                 message: document.getElementById('message').value
             };
+            
+            // Validation des dates
+            const dateArrivee = new Date(formData.date_arrivee);
+            const dateDepart = new Date(formData.date_depart);
+            const aujourdhui = new Date();
+            aujourdhui.setHours(0, 0, 0, 0);
+            
+            if (dateArrivee < aujourdhui) {
+                formStatus.style.color = 'red';
+                formStatus.textContent = '⚠ La date d\'arrivée ne peut pas être dans le passé.';
+                submitBtn.disabled = false;
+                submitBtn.textContent = 'Envoyer la demande';
+                submitBtn.style.opacity = '1';
+                return;
+            }
+            
+            if (dateDepart <= dateArrivee) {
+                formStatus.style.color = 'red';
+                formStatus.textContent = '⚠ La date de départ doit être après la date d\'arrivée.';
+                submitBtn.disabled = false;
+                submitBtn.textContent = 'Envoyer la demande';
+                submitBtn.style.opacity = '1';
+                return;
+            }
             
             // OPTION 1 : Formspree (recommandé - gratuit et simple)
             // Remplacez YOUR_FORM_ID par votre ID Formspree après inscription sur formspree.io
