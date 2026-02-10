@@ -114,6 +114,25 @@
             width: 100%;
         }
 
+        /* Numéro de téléphone dans la navigation */
+        .nav-phone {
+            display: flex;
+            align-items: center;
+            margin-right: 2rem;
+        }
+
+        .nav-phone a {
+            color: #0F3A4C;
+            text-decoration: none;
+            font-weight: 600;
+            font-size: 1rem;
+            transition: color 0.3s ease;
+        }
+
+        .nav-phone a:hover {
+            color: #2E86AB;
+        }
+
         /* Hero Section */
         .hero {
             height: 100vh;
@@ -828,6 +847,11 @@
 
         /* Menu Mobile */
         @media (max-width: 968px) {
+            /* Masquer le numéro de téléphone sur mobile pour éviter la surcharge */
+            .nav-phone {
+                display: none;
+            }
+
             .mobile-menu-toggle {
                 display: flex;
             }
