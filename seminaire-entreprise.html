@@ -17,13 +17,39 @@
     <meta property="og:url" content="https://lasourceforez.fr/seminaire-entreprise.html">
     <meta property="og:locale" content="fr_FR">
 
-    <!-- Schema.org -->
+    <!-- Schema.org LodgingBusiness -->
+    <script type="application/ld+json">
+    {
+      "@context": "https://schema.org",
+      "@type": "LodgingBusiness",
+      "name": "Le Gîte La Source",
+      "description": "Gîte de groupe et lieu de séminaire au vert à 1h de Lyon, 6 hectares, 15 couchages, salle de formation",
+      "url": "https://lasourceforez.fr",
+      "telephone": "+33749023674",
+      "address": {
+        "@type": "PostalAddress",
+        "streetAddress": "650 Chemin de Baloye",
+        "addressLocality": "Arthun",
+        "postalCode": "42130",
+        "addressCountry": "FR"
+      },
+      "numberOfRooms": 6,
+      "geo": {
+        "@type": "GeoCoordinates",
+        "latitude": 45.75,
+        "longitude": 4.05
+      },
+      "image": "https://lasourceforez.fr/images/hero.jpg"
+    }
+    </script>
+
+    <!-- Schema.org EventVenue -->
     <script type="application/ld+json">
     {
       "@context": "https://schema.org",
       "@type": "EventVenue",
       "name": "Le Gîte La Source - Séminaires Entreprises",
-      "description": "Lieu de séminaire et de formation en pleine nature dans le Forez, à 1h de Lyon. Salle de formation, hébergement jusqu'à 15 personnes sur 6 hectares.",
+      "description": "Gîte de groupe et lieu de séminaire au vert à 1h de Lyon, 6 hectares, 15 couchages, salle de formation",
       "url": "https://lasourceforez.fr/seminaire-entreprise.html",
       "telephone": "+33749023674",
       "address": {
@@ -33,7 +59,13 @@
         "postalCode": "42130",
         "addressCountry": "FR"
       },
-      "image": "https://lasourceforez.fr/images/entreprise-1.jpg"
+      "maximumAttendeeCapacity": 30,
+      "geo": {
+        "@type": "GeoCoordinates",
+        "latitude": 45.75,
+        "longitude": 4.05
+      },
+      "image": "https://lasourceforez.fr/images/hero.jpg"
     }
     </script>
 
