@@ -1,0 +1,11 @@
+# macOS
+.DS_Store
+
+# Archives locales
+*.zip
+
+# Notes / contexte privés (ne pas publier sur le dépôt public)
+claude.md
+CLAUDE.md
+lasourceforez-context.md
+prospect-*.md
