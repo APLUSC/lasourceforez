@@ -875,6 +875,12 @@
                 gap: 1.5rem;
             }
 
+            /* iOS (Safari/Chrome) rend mal background-attachment: fixed
+               (image zoomée/floue) → on repasse en scroll sur mobile */
+            .hero {
+                background-attachment: scroll;
+            }
+
             .hero h1 {
                 font-size: 3rem;
             }
