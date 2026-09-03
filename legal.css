@@ -1,0 +1,212 @@
+/* ============================================
+   Pages juridiques — mentions légales, CGV, confidentialité
+   Feuille séparée : ces pages ont une typographie de lecture
+   longue qui n'a rien à voir avec les pages commerciales.
+   ============================================ */
+
+.legal-page {
+    padding: 8rem 0 4rem;
+    background: #fff;
+}
+
+.legal-content {
+    max-width: 800px;
+    margin: 0 auto;
+    padding: 0 1.5rem;
+    color: #333;
+    line-height: 1.75;
+}
+
+.legal-content h1 {
+    font-family: 'Cormorant', serif;
+    font-size: 2.6rem;
+    color: #0F3A4C;
+    margin-bottom: 0.5rem;
+    line-height: 1.15;
+}
+
+.legal-content .legal-date {
+    color: #666;
+    font-size: 0.95rem;
+    margin-bottom: 2.5rem;
+}
+
+.legal-content h2 {
+    font-family: 'Cormorant', serif;
+    font-size: 1.6rem;
+    color: #0F3A4C;
+    margin: 2.8rem 0 0.8rem;
+    padding-top: 1.6rem;
+    border-top: 1px solid #e3e8ea;
+    scroll-margin-top: 90px; /* pour que l'ancre ne passe pas sous la barre de nav */
+}
+
+.legal-content h2:first-of-type {
+    border-top: none;
+    padding-top: 0;
+    margin-top: 2rem;
+}
+
+.legal-content h3 {
+    font-family: 'Questrial', sans-serif;
+    font-size: 1.1rem;
+    color: #0F3A4C;
+    margin: 1.8rem 0 0.6rem;
+}
+
+.legal-content p,
+.legal-content li {
+    margin-bottom: 0.9rem;
+}
+
+.legal-content ul {
+    padding-left: 1.4rem;
+    margin-bottom: 1rem;
+}
+
+.legal-content a {
+    color: #2E86AB;
+}
+
+.legal-content strong {
+    color: #0F3A4C;
+}
+
+/* Encart d'identité (éditeur, hébergeur…) */
+.identity {
+    background: #f8f9fa;
+    border-left: 3px solid #2E86AB;
+    padding: 1.2rem 1.4rem;
+    margin-bottom: 1.2rem;
+    border-radius: 4px;
+}
+
+/* Sommaire ancré */
+.legal-toc {
+    background: #f8f9fa;
+    border: 1px solid #e3e8ea;
+    border-radius: 6px;
+    padding: 1.4rem 1.6rem;
+    margin-bottom: 3rem;
+}
+
+.legal-toc h2 {
+    font-size: 1.1rem;
+    font-family: 'Questrial', sans-serif;
+    border: none;
+    padding: 0;
+    margin: 0 0 0.8rem;
+}
+
+.legal-toc ol {
+    margin: 0;
+    padding-left: 1.3rem;
+    columns: 2;
+    column-gap: 2rem;
+}
+
+.legal-toc li {
+    margin-bottom: 0.35rem;
+    break-inside: avoid;
+}
+
+.legal-toc a {
+    color: #2E86AB;
+    text-decoration: none;
+}
+
+.legal-toc a:hover,
+.legal-toc a:focus-visible {
+    text-decoration: underline;
+}
+
+/* Étiquettes PRO / PARTICULIERS
+   Remplacent les marqueurs [PRO] et [PARTICULIERS] du document source. */
+.tag {
+    display: inline-block;
+    font-size: 0.72rem;
+    font-weight: bold;
+    letter-spacing: 0.04em;
+    text-transform: uppercase;
+    padding: 0.15rem 0.55rem;
+    border-radius: 3px;
+    vertical-align: 0.1em;
+    margin-right: 0.4rem;
+    white-space: nowrap;
+}
+
+.tag-pro {
+    background: #0F3A4C;
+    color: #fff;
+}
+
+.tag-part {
+    background: #C9A227;
+    color: #2a1f00;
+}
+
+/* Tableaux (barèmes d'annulation) — défilent seuls sur mobile */
+.table-wrap {
+    overflow-x: auto;
+    margin: 1rem 0 1.5rem;
+    -webkit-overflow-scrolling: touch;
+}
+
+.legal-content table {
+    border-collapse: collapse;
+    width: 100%;
+    min-width: 380px;
+    font-size: 0.95rem;
+}
+
+.legal-content th,
+.legal-content td {
+    border: 1px solid #dde3e6;
+    padding: 0.6rem 0.9rem;
+    text-align: left;
+}
+
+.legal-content th {
+    background: #0F3A4C;
+    color: #fff;
+    font-weight: normal;
+}
+
+.legal-content tbody tr:nth-child(even) {
+    background: #f8f9fa;
+}
+
+/* Encart d'avertissement / information */
+.legal-note {
+    background: #fdf8e8;
+    border-left: 3px solid #C9A227;
+    padding: 1rem 1.3rem;
+    margin: 1.5rem 0;
+    border-radius: 4px;
+    font-size: 0.95rem;
+}
+
+.legal-back {
+    text-align: center;
+    padding: 2rem 0 3rem;
+    background: #f8f9fa;
+}
+
+.legal-back a {
+    color: #2E86AB;
+    text-decoration: none;
+}
+
+.legal-top {
+    display: inline-block;
+    margin-top: 2.5rem;
+    font-size: 0.9rem;
+    color: #2E86AB;
+    text-decoration: none;
+}
+
+@media (max-width: 640px) {
+    .legal-page { padding-top: 6rem; }
+    .legal-content h1 { font-size: 2rem; }
+    .legal-toc ol { columns: 1; }
+}

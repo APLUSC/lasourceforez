@@ -19,4 +19,22 @@
     <priority>0.9</priority>
   </url>
 
+  <url>
+    <loc>https://lasourceforez.fr/mentions-legales/</loc>
+    <lastmod>2026-09-03</lastmod>
+    <priority>0.2</priority>
+  </url>
+
+  <url>
+    <loc>https://lasourceforez.fr/cgv/</loc>
+    <lastmod>2026-09-03</lastmod>
+    <priority>0.3</priority>
+  </url>
+
+  <url>
+    <loc>https://lasourceforez.fr/confidentialite/</loc>
+    <lastmod>2026-09-03</lastmod>
+    <priority>0.2</priority>
+  </url>
+
 </urlset>

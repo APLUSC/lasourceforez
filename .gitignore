@@ -9,3 +9,12 @@ claude.md
 CLAUDE.md
 lasourceforez-context.md
 prospect-*.md
+
+# Chantier juridique — documents de travail et pièces confidentielles.
+# Le dépôt est PUBLIC : contrats, CERFA et brouillons ne doivent jamais y entrer.
+*-projet.md
+prompt-claude-code-*.md
+*.pdf
+*.xls
+*.xlsx
+*.gdoc

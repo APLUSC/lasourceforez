@@ -57,16 +57,14 @@
     <link href="https://fonts.googleapis.com/css2?family=Cormorant:wght@400;600;700&family=Questrial&display=swap" rel="stylesheet">
     <link rel="stylesheet" href="style.css">
 
-    <!-- Google Analytics -->
-    <script async src="https://www.googletagmanager.com/gtag/js?id=G-VG3YTNYV45"></script>
-    <script>
-        window.dataLayer = window.dataLayer || [];
-        function gtag(){dataLayer.push(arguments);}
-        gtag('js', new Date());
-        
-        gtag('config', 'G-VG3YTNYV45');
-    </script>
-    
+    <!--
+        Google Analytics (G-VG3YTNYV45) retiré le 03/09/2026.
+        Motif : le traceur se chargeait dès l'arrivée du visiteur, sans bandeau de
+        consentement — c'est le manquement CNIL le plus courant sur les petits sites.
+        Décision de Fabrice : supprimer la mesure d'audience plutôt qu'ajouter un bandeau.
+        Les mentions légales (§9) affirment désormais « aucun cookie » : toute
+        réintroduction d'un traceur ici oblige à réécrire cette page.
+    -->
 </head>
 <body>
     <!-- Navigation -->
@@ -254,16 +252,28 @@
             <h2 class="section-title">Localisation</h2>
             <p class="section-subtitle">Au cœur du Forez, à seulement 1 heure de Lyon</p>
             
+            <!--
+                Chargement au clic (03/09/2026) : la carte Google dépose des traceurs
+                dès son affichage. Elle ne se charge donc qu'après une action du visiteur,
+                ce qui permet aux mentions légales d'affirmer « aucun cookie ».
+                Ne pas remettre l'iframe en dur sans réécrire le §9 des mentions légales.
+            -->
             <div class="map-container">
-                <iframe 
-                    src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d2829.992179528298!2d4.0192665761717565!3d45.773472512750494!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x47f4234b24e81439%3A0x6034aac4b29aa6e5!2s650%20Chem.%20de%20Baloye!5e1!3m2!1sfr!2sfr!4v1769374271197!5m2!1sfr!2sfr"
-                    width="100%" 
-                    height="100%" 
-                    style="border:0;" 
-                    allowfullscreen="" 
-                    loading="lazy" 
-                    referrerpolicy="no-referrer-when-downgrade">
-                </iframe>
+                <div class="consent-embed" style="width:100%;height:100%;min-height:320px;display:flex;flex-direction:column;align-items:center;justify-content:center;text-align:center;gap:1rem;background:#f0f4f6;padding:2rem;">
+                    <p style="margin:0;color:#0F3A4C;max-width:420px;">
+                        <strong>650 Chemin de Baloye, 42130 Arthun</strong><br>
+                        <span style="font-size:0.9rem;color:#555;">La carte est fournie par Google, qui peut déposer des traceurs sur votre appareil. Elle ne se charge qu'à votre demande.</span>
+                    </p>
+                    <button type="button" class="cta-btn cta-primary consent-embed-btn"
+                            data-src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d2829.992179528298!2d4.0192665761717565!3d45.773472512750494!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x47f4234b24e81439%3A0x6034aac4b29aa6e5!2s650%20Chem.%20de%20Baloye!5e1!3m2!1sfr!2sfr!4v1769374271197!5m2!1sfr!2sfr"
+                            data-title="Carte de localisation du Gîte La Source"
+                            data-style="border:0;width:100%;height:100%;min-height:320px;">
+                        Afficher la carte
+                    </button>
+                    <a href="https://www.google.com/maps/search/?api=1&query=650+Chemin+de+Baloye+42130+Arthun"
+                       target="_blank" rel="noopener noreferrer"
+                       style="font-size:0.85rem;color:#2E86AB;">ou ouvrir l'itinéraire dans un nouvel onglet</a>
+                </div>
             </div>
 
             <div class="location-info">
@@ -310,8 +320,21 @@
                     </div>
 
                     <!-- Calendrier Google intégré -->
+                    <!-- Chargement au clic (03/09/2026) — même motif que la carte, voir plus haut. -->
                     <div class="calendar-embed">
-                       <iframe src="https://calendar.google.com/calendar/embed?height=450&wkst=2&ctz=Europe%2FParis&showPrint=0&showTitle=0&showTabs=0&showCalendars=0&showTz=0&src=Y180NjliYzA1ZjhiZmFjOTUwODZlOTg0NTY0NmYxNmJjYTI4NDFjZGQzNzhiYjRjMTRjMDVkZDdmNDBkMDY4ZjQyQGdyb3VwLmNhbGVuZGFyLmdvb2dsZS5jb20&color=%234285f4" style="border-width:0" width="900" height="450" frameborder="0" scrolling="no"></iframe>
+                       <div class="consent-embed" style="min-height:300px;display:flex;flex-direction:column;align-items:center;justify-content:center;text-align:center;gap:1rem;background:#f0f4f6;padding:2rem;">
+                           <p style="margin:0;color:#0F3A4C;max-width:460px;">
+                               <strong>Calendrier des disponibilités</strong><br>
+                               <span style="font-size:0.9rem;color:#555;">L'agenda est fourni par Google, qui peut déposer des traceurs sur votre appareil. Il ne se charge qu'à votre demande.</span>
+                           </p>
+                           <button type="button" class="cta-btn cta-primary consent-embed-btn"
+                                   data-src="https://calendar.google.com/calendar/embed?height=450&wkst=2&ctz=Europe%2FParis&showPrint=0&showTitle=0&showTabs=0&showCalendars=0&showTz=0&src=Y180NjliYzA1ZjhiZmFjOTUwODZlOTg0NTY0NmYxNmJjYTI4NDFjZGQzNzhiYjRjMTRjMDVkZDdmNDBkMDY4ZjQyQGdyb3VwLmNhbGVuZGFyLmdvb2dsZS5jb20&color=%234285f4"
+                                   data-title="Calendrier des disponibilités du Gîte La Source"
+                                   data-style="border-width:0;width:900px;max-width:100%;height:450px;">
+                               Afficher le calendrier
+                           </button>
+                           <p style="margin:0;font-size:0.85rem;color:#555;">Vous pouvez aussi nous appeler au <a href="tel:+33749023674" style="color:#2E86AB;">07 49 02 36 74</a>.</p>
+                       </div>
                     </div>
 
                     <!-- Call to action après avoir vu le calendrier -->
@@ -426,6 +449,26 @@
                     <textarea id="message" name="message" required></textarea>
                 </div>
                 
+                <!--
+                    Case d'acceptation : NON pré-cochée et `required`.
+                    Une case pré-cochée ne vaut pas consentement (RGPD, art. 4-11).
+                    Le navigateur bloque l'envoi tant qu'elle n'est pas cochée.
+                -->
+                <div class="form-group" style="display: flex; align-items: flex-start; gap: 0.7rem; margin-top: 1.5rem;">
+                    <input type="checkbox" id="acceptation" name="acceptation" value="oui" required
+                           style="margin-top: 0.35rem; width: 1.1rem; height: 1.1rem; flex-shrink: 0;">
+                    <label for="acceptation" style="font-size: 0.9rem; line-height: 1.5; font-weight: normal;">
+                        J'ai lu et j'accepte les
+                        <a href="cgv/" target="_blank" rel="noopener" style="color: #2E86AB;">conditions générales de vente</a>
+                        et la
+                        <a href="confidentialite/" target="_blank" rel="noopener" style="color: #2E86AB;">politique de confidentialité</a>. *
+                    </label>
+                </div>
+
+                <p style="font-size: 0.85rem; color: #666; margin-bottom: 1.2rem;">
+                    Taxe de séjour en sus, collectée pour le compte de l'office de tourisme Loire Forez.
+                </p>
+
                 <button type="submit" class="submit-btn">Envoyer la demande</button>
                 <p style="margin-top: 1rem; font-size: 0.9rem; color: #666; text-align: center;" id="formStatus"></p>
             </form>
@@ -441,7 +484,12 @@
                     📍 650 Chemin de Baloye, 42130 ARTHUN<br>
                     📞 <a href="tel:+33749023674" style="color: white; text-decoration: none;">07 49 02 36 74</a>
                 </p>
-                
+                <p style="font-size: 0.85rem;">
+                    <a href="mentions-legales/" style="color: white;">Mentions légales</a> ·
+                    <a href="cgv/" style="color: white;">CGV</a> ·
+                    <a href="confidentialite/" style="color: white;">Confidentialité</a>
+                </p>
+
                 <!-- Réseaux sociaux -->
                 <div style="display: flex; gap: 1.5rem; margin-top: 0.5rem;">
                     <a href="https://www.instagram.com/gite.lasource/" 
@@ -461,6 +509,24 @@
     </footer>
 
     <script>
+        // Contenus Google (carte, agenda) : chargés uniquement sur clic du visiteur.
+        // Tant que personne ne clique, aucune requête ne part vers Google depuis ces blocs.
+        document.querySelectorAll('.consent-embed-btn').forEach(function (btn) {
+            btn.addEventListener('click', function () {
+                const placeholder = this.closest('.consent-embed');
+                const iframe = document.createElement('iframe');
+                iframe.src = this.dataset.src;
+                iframe.title = this.dataset.title || '';
+                iframe.loading = 'lazy';
+                iframe.setAttribute('frameborder', '0');
+                iframe.setAttribute('scrolling', 'no');
+                iframe.setAttribute('allowfullscreen', '');
+                iframe.setAttribute('referrerpolicy', 'no-referrer-when-downgrade');
+                iframe.style.cssText = this.dataset.style || 'border:0;width:100%;height:100%;';
+                placeholder.replaceWith(iframe);
+            });
+        });
+
         // Menu Mobile Toggle
         const mobileMenuToggle = document.getElementById('mobileMenuToggle');
         const navLinks = document.getElementById('navLinks');
@@ -538,7 +604,12 @@
                 date_depart: document.getElementById('date_depart').value,
                 besoins: document.getElementById('besoins').value,
                 origine: document.getElementById('origine').value,
-                message: document.getElementById('message').value
+                message: document.getElementById('message').value,
+                // Trace de l'acceptation : c'est cette ligne qui, dans le mail reçu,
+                // prouve que la case a été cochée au moment de l'envoi.
+                acceptation_cgv_confidentialite: document.getElementById('acceptation').checked
+                    ? 'Acceptées le ' + new Date().toLocaleString('fr-FR')
+                    : 'NON acceptées'
             };
             
             // Validation des dates
