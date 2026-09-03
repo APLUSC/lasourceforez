@@ -1033,3 +1033,157 @@
         html {
             scroll-behavior: smooth;
         }
+
+        /* ===================================================================
+           Blocs de conditions de prestation (pages Entreprises & Particuliers)
+           Trois composants, sans media query : les grilles sont en auto-fit.
+           - .inclus-grid  : ce qui est compris dans le tarif
+           - .etapes       : le déroulé, de la demande au jour J
+           - .a-savoir     : les conditions à connaître avant de réserver
+           =================================================================== */
+
+        .conditions-bloc {
+            margin: 3.5rem 0;
+        }
+
+        .conditions-bloc > h3 {
+            font-size: 1.7rem;
+            color: var(--color-forest);
+            margin-bottom: 0.6rem;
+        }
+
+        .conditions-bloc > .conditions-intro {
+            color: var(--color-brown);
+            font-size: 1.05rem;
+            margin-bottom: 2rem;
+            line-height: 1.7;
+        }
+
+        /* --- Ce qui est compris --- */
+        .inclus-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(270px, 1fr));
+            gap: 1.6rem 2.5rem;
+            background: white;
+            border-left: 4px solid var(--color-accent);
+            box-shadow: 0 2px 10px rgba(0,0,0,0.05);
+            padding: 2.2rem;
+        }
+
+        .inclus-item {
+            padding-left: 1.9rem;
+            position: relative;
+            line-height: 1.7;
+            font-size: 0.98rem;
+            color: #555;
+        }
+
+        .inclus-item::before {
+            content: "✓";
+            position: absolute;
+            left: 0;
+            top: -0.1rem;
+            color: var(--color-accent);
+            font-size: 1.2rem;
+            font-weight: 700;
+        }
+
+        .inclus-item strong {
+            display: block;
+            color: var(--color-forest);
+            font-weight: 600;
+            margin-bottom: 0.2rem;
+        }
+
+        /* --- Le déroulé, en étapes numérotées --- */
+        .etapes {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(230px, 1fr));
+            gap: 1.5rem;
+            counter-reset: etape;
+            list-style: none;
+            padding: 0;
+            margin: 0;
+        }
+
+        .etapes li {
+            counter-increment: etape;
+            background: white;
+            border-top: 3px solid var(--color-accent);
+            padding: 1.6rem 1.5rem;
+            box-shadow: 0 2px 10px rgba(0,0,0,0.05);
+            font-size: 0.95rem;
+            line-height: 1.7;
+            color: #555;
+        }
+
+        .etapes li::before {
+            content: counter(etape);
+            display: inline-flex;
+            align-items: center;
+            justify-content: center;
+            width: 1.9rem;
+            height: 1.9rem;
+            border-radius: 50%;
+            background: var(--color-forest);
+            color: white;
+            font-weight: 700;
+            font-size: 0.95rem;
+            margin-bottom: 0.8rem;
+        }
+
+        .etapes li strong {
+            display: block;
+            color: var(--color-forest);
+            font-weight: 600;
+            margin-bottom: 0.3rem;
+        }
+
+        /* --- À savoir avant de réserver --- */
+        .a-savoir {
+            background: var(--color-beige);
+            border-left: 4px solid var(--color-brown);
+            padding: 2.2rem;
+        }
+
+        .a-savoir ul {
+            list-style: none;
+            padding: 0;
+            margin: 0;
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+            gap: 1rem 2.5rem;
+        }
+
+        .a-savoir li {
+            padding-left: 1.3rem;
+            position: relative;
+            font-size: 0.95rem;
+            line-height: 1.7;
+            color: #555;
+        }
+
+        .a-savoir li::before {
+            content: "—";
+            position: absolute;
+            left: 0;
+            color: var(--color-brown);
+        }
+
+        .a-savoir strong {
+            color: var(--color-forest);
+            font-weight: 600;
+        }
+
+        .a-savoir .a-savoir-cgv {
+            margin: 1.6rem 0 0 0;
+            padding-top: 1.2rem;
+            border-top: 1px solid rgba(139, 111, 71, 0.25);
+            font-size: 0.92rem;
+            color: #666;
+        }
+
+        .a-savoir .a-savoir-cgv a {
+            color: var(--color-accent);
+            font-weight: 600;
+        }
