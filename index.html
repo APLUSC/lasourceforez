@@ -449,6 +449,12 @@
                     <textarea id="message" name="message" required></textarea>
                 </div>
                 
+                <!-- Champ piège anti-robots : invisible et hors clavier pour une personne, rempli par les robots. -->
+                <div aria-hidden="true" style="position:absolute; left:-9999px;">
+                    <label for="site_web">Site web</label>
+                    <input type="text" name="site_web" id="site_web" tabindex="-1" autocomplete="off">
+                </div>
+
                 <!--
                     Case d'acceptation : NON pré-cochée et `required`.
                     Une case pré-cochée ne vaut pas consentement (RGPD, art. 4-11).
@@ -605,6 +611,7 @@
                 besoins: document.getElementById('besoins').value,
                 origine: document.getElementById('origine').value,
                 message: document.getElementById('message').value,
+                site_web: document.getElementById('site_web').value,
                 // Trace de l'acceptation : c'est cette ligne qui, dans le mail reçu,
                 // prouve que la case a été cochée au moment de l'envoi.
                 acceptation_cgv_confidentialite: document.getElementById('acceptation').checked
@@ -636,6 +643,17 @@
                 return;
             }
             
+            // Copie vers Pilotage Pro (outil de gestion) : résultat ignoré, le formulaire
+            // ne dépend jamais de sa réponse.
+            try {
+                fetch('https://qwwmbhoflwjuwidvbmyl.supabase.co/functions/v1/demande-la-source', {
+                    method: 'POST',
+                    headers: { 'Content-Type': 'application/json' },
+                    body: JSON.stringify(formData),
+                    keepalive: true
+                }).catch(() => {});
+            } catch (e) { /* ignoré */ }
+
             // OPTION 1 : Formspree (recommandé - gratuit et simple)
             // Remplacez YOUR_FORM_ID par votre ID Formspree après inscription sur formspree.io
             fetch('https://formspree.io/f/mreqbble', {
