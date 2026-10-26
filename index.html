@@ -396,17 +396,17 @@
             <form class="contact-form" id="contactForm">
                 <div class="form-group">
                     <label for="nom">Nom *</label>
-                    <input type="text" id="nom" name="nom" required>
+                    <input type="text" id="nom" name="nom" maxlength="200" required>
                 </div>
                 
                 <div class="form-group">
                     <label for="email">Email *</label>
-                    <input type="email" id="email" name="email" required>
+                    <input type="email" id="email" name="email" maxlength="200" required>
                 </div>
                 
                 <div class="form-group">
                     <label for="telephone">Téléphone *</label>
-                    <input type="tel" id="telephone" name="telephone" required>
+                    <input type="tel" id="telephone" name="telephone" maxlength="200" required>
                 </div>
                 
                 <div class="form-group">
@@ -436,17 +436,17 @@
                 
                 <div class="form-group">
                     <label for="besoins">Besoins spécifiques (restauration, activités, accessibilité...)</label>
-                    <textarea id="besoins" name="besoins" rows="3" placeholder="Exemple : Repas végétariens, accès PMR, activités équestres..."></textarea>
+                    <textarea id="besoins" name="besoins" rows="3" maxlength="5000"placeholder="Exemple : Repas végétariens, accès PMR, activités équestres..."></textarea>
                 </div>
                 
                 <div class="form-group">
                     <label for="origine">Comment avez-vous connu Le Gîte La Source ?</label>
-                    <input type="text" id="origine" name="origine" placeholder="Bouche à oreille, réseaux sociaux, recherche internet...">
+                    <input type="text" id="origine" name="origine" maxlength="200"placeholder="Bouche à oreille, réseaux sociaux, recherche internet...">
                 </div>
                 
                 <div class="form-group">
                     <label for="message">Message *</label>
-                    <textarea id="message" name="message" required></textarea>
+                    <textarea id="message" name="message" maxlength="5000" required></textarea>
                 </div>
                 
                 <!-- Champ piège anti-robots : invisible et hors clavier pour une personne, rempli par les robots. -->
@@ -649,8 +649,7 @@
                 fetch('https://qwwmbhoflwjuwidvbmyl.supabase.co/functions/v1/demande-la-source', {
                     method: 'POST',
                     headers: { 'Content-Type': 'application/json' },
-                    body: JSON.stringify(formData),
-                    keepalive: true
+                    body: JSON.stringify(formData)
                 }).catch(() => {});
             } catch (e) { /* ignoré */ }
 
