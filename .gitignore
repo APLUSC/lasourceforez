@@ -21,3 +21,6 @@ prompt-claude-code-*.md
 
 # Documents commerciaux (devis, annexes signées, pièces client) : jamais sur le dépôt public.
 documents-commerciaux/
+
+# Journal du hook de clôture de session (.claude/hooks/fin-session.sh)
+.claude/fin-session.log
