@@ -2,15 +2,14 @@
 Mis à jour : 2026-10-28
 
 ## Fait (dernière session)
-- Formulaire de contact : les demandes arrivent aussi dans Pilotage Pro.
-- Longueurs maximales des champs alignées sur Pilotage Pro.
-- Page de confidentialité : Pilotage Pro est hébergé dans l'Union européenne (Paris).
+- Aucune modification du site.
+- Test de la clôture automatique de session (commit `8615217`).
 
 ## En cours / en attente
 - Rien.
 
 ## À vérifier (bugs, doutes)
-- Envoyer une vraie demande depuis le site et vérifier qu'elle arrive dans Pilotage Pro.
+- Envoyer une vraie demande depuis le site et vérifier qu'elle arrive dans Pilotage Pro (pas encore fait depuis le 26/10).
 
 ## Prochaine étape
 - Suivre les premières demandes reçues par le site.
